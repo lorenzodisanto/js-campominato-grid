@@ -1,9 +1,15 @@
 #header {
   height: 70px;
-  background-color: #cfc7c7;
+  background-color: #eae7e7;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#header span {
+  vertical-align: middle;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .wrapper {
@@ -25,8 +31,6 @@
 }
 
 .box {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 2px solid black;
   display: flex;
   justify-content: center;
@@ -38,9 +42,24 @@
   background-color: #0d6efd;
 }
 
+.hard {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+}
+
+.medium {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+.easy {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
 #footer {
   height: 50px;
   line-height: 50px;
   vertical-align: middle;
-  background-color: #cfc7c7;
+  background-color: #eae7e7;
 }
