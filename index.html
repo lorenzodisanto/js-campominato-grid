@@ -34,9 +34,17 @@
   <body>
     <header id="header" class="px-3">
       <h1>Campo Minato</h1>
-      <button type="button" class="btn btn-primary px-4" id="playbutton">
-        Play
-      </button>
+      <form>
+        <span>Difficoltà:</span>
+        <select class="btn btn-light px-4 mx-2" id="selectlevel">
+          <option value="facile">Facile</option>
+          <option value="medio">Medio</option>
+          <option value="difficile">Difficile</option>
+        </select>
+        <button type="button" class="btn btn-primary px-4" id="playbutton">
+          Play
+        </button>
+      </form>
     </header>
     <main>
       <div class="wrapper">
