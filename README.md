@@ -47,3 +47,28 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 - al click della cella
   - faccio toggle della classe active;
   - mostro il numero della cella cliccata in console.
+
+### BONUS
+
+- creo nell'html il select;
+- recupero il select nel main.js;
+
+#### funzione griglia
+
+- assegno a una variabile il valore della select;
+- SE il livello è facile
+  - stampo 100 celle;
+- SE il livello è medio
+  - stampo 81 celle;
+- SE il livello è difficile
+  - stampo 49 celle;
+
+### funzione cella
+
+- assegno a una variabile il valore della select;
+- SE il livello è facile
+  - la cella avrà classe easy;
+- SE il livello è medio
+  - la cella avrà classe medium;
+- SE il livello è difficile
+  - la cella avrà classe hard;
