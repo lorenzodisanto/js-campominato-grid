@@ -26,3 +26,24 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 ## SVOLGIMENTO
 
 - creo la struttura della griglia con html e css;
+
+### foglio main.js
+
+- recupero gli elementi bottone e box-container;
+- al click del bottone genero la griglia
+
+### foglio functions.js
+
+#### funzione griglia
+
+- inserisco contenitore dove mettere la griglia;
+- genero la cella (funzione cella) per 100 volte con ciclo for;
+- aggiungo la cella;
+
+#### funzione cella
+
+- creo l'elemento cella;
+- aggiungo la classe box all'elemento creato;
+- al click della cella
+  - faccio toggle della classe active;
+  - mostro il numero della cella cliccata in console.
