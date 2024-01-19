@@ -15,6 +15,18 @@ function genGrid(container) {
     const cellElement = genCell(i + 1);
     container.append(cellElement);
   }
+
+  // creo array bombe
+  const elementsNumber = 16;
+  if (cellNumber - 1 > elementsNumber) {
+    while (myBombs.length < elementsNumber) {
+      generateNumber = genRandomNumber(1, cellNumber);
+      if (!myBombs.includes(generateNumber)) {
+        myBombs.push(generateNumber);
+      }
+    }
+  }
+  console.table(myBombs);
 }
 
 // funzione genero cella
@@ -36,4 +48,10 @@ function genCell(text) {
     console.log("hai clickato la cella " + text);
   });
   return cell;
+}
+
+// funzione genera numero random
+function genRandomNumber(min, max) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  return randomNumber;
 }
