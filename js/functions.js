@@ -2,7 +2,7 @@
 function genGrid(container) {
   container.innerHTML = "";
   let level = selectLevel.value;
-  let cellNumber;
+
   if (level == "facile") {
     cellNumber = 100;
   } else if (level == "medio") {
@@ -17,7 +17,7 @@ function genGrid(container) {
   }
 
   // creo array bombe
-  const elementsNumber = 16;
+
   if (cellNumber - 1 > elementsNumber) {
     while (myBombs.length < elementsNumber) {
       generateNumber = genRandomNumber(1, cellNumber);
@@ -44,8 +44,26 @@ function genCell(text) {
   }
   cell.innerText = text;
   cell.addEventListener("click", function () {
-    cell.classList.toggle("active");
-    console.log("hai clickato la cella " + text);
+    if (!isGameOver) {
+      if (myBombs.includes(text)) {
+        cell.classList.add("stop");
+        alert("Hai pestato una BOMBA!!!!");
+        isGameOver = true;
+        console.log(score);
+        scoreText.innerText =
+          "Hai perso!!!! Hai totalizzato " + score + " punti";
+      } else {
+        cell.classList.add("active");
+        score++;
+        if (score == cellNumber - myBombs.length) {
+          alert("Hai VINTO!!!!");
+          isGameOver = true;
+          console.log(score);
+          scoreText.innerText =
+            "Hai vinto!!!! Hai totalizzato " + score + " punti";
+        }
+      }
+    }
   });
   return cell;
 }
